@@ -18,13 +18,13 @@ with webdriver.Chrome(service=Service(driver_path), options=options) as driver:
     time.sleep(10)
     input_element = driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div[2]/form/label/div/div/input")
     input_element.send_keys("mostafaesl76@gmail.com")
-    element2 = driver.find_element(By.XPATH, ' /html/body/div[1]/main/div[2]/div[2]/form/button/div[2]')
-    element2.click()
+    input_element.send_keys(Keys.ENTER)
+    
     time.sleep(5)
     input_element1 = driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div[2]/form/label/div/div[1]/input")
     input_element1.send_keys("10152099Most@f@")
-    element2 = driver.find_element(By.XPATH, ' /html/body/div[1]/main/div[2]/div[2]/button[2]/div[2]')
-    element2.click()
+    
+    input_element1.send_keys(Keys.ENTER)
     time.sleep(5)
     element2 = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/header/div[2]/div/div/div[2]/div[1]/div[2]/a/div')
     element2.click()
