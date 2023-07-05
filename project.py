@@ -25,3 +25,4 @@ with webdriver.Chrome(service=Service(driver_path), options=options) as driver:
     input_element1.send_keys("10152099Most@f@")
     element2 = driver.find_element(By.XPATH, ' /html/body/div[1]/main/div[2]/div[2]/button[2]/div[2]')
     element2.click()
+    time.sleep(5)
