@@ -12,6 +12,7 @@ options.add_argument('--ignore-ssl-errors')
 
 with webdriver.Chrome(service=Service(driver_path), options=options) as driver:
     driver.get(url)
+    time.sleep(5)
     element = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/div[4]/div[1]/header/div[2]/a/button')
     element.click()
     input_element = driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/div[2]/form/label/div/div/input")
